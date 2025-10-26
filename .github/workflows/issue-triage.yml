@@ -3,7 +3,9 @@ description: Run Claude Code for issue triage in GitHub Actions
 on:
   issues:
     types: [opened]
-
+  issue_comment:
+    types: [created]
+    
 jobs:
   triage-issue:
     runs-on: ubuntu-latest
