@@ -6,11 +6,6 @@ on:
 
 jobs:
   review-by-author:
-    # Only run for PRs from specific authors
-    if: |
-      github.event.pull_request.user.login == 'developer1' ||
-      github.event.pull_request.user.login == 'developer2' ||
-      github.event.pull_request.user.login == 'external-contributor'
     runs-on: ubuntu-latest
     permissions:
       contents: read
